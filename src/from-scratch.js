@@ -93,7 +93,18 @@ const sortUsersByOrder = (arr) => {
 
 const sortUsersByName = (arr) => {
   const copyArr = [...arr];
-  return copyArr.sort();
+
+  copyArr.sort((person1, person2) => {
+    if (person1.name.toLowerCase() < person2.name.toLowerCase()) {
+      return -1;
+    } else if (person1.name.toLowerCase() > person2.name.toLowerCase()) {
+      return 1;
+    } else {
+      return 0;
+    }
+  })
+
+  return copyArr;
 };
 
 module.exports = {
