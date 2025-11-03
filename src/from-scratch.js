@@ -15,7 +15,7 @@ const getSquaredTotal = (arr) => {
 
 // every
 const hasOnlyEvenNumbers = (arr) => {
-  if (arr <= 0) {
+  if (arr.length <= 0) {
     return false;
   }
   return arr.every(value => value % 2 === 0);
@@ -23,7 +23,7 @@ const hasOnlyEvenNumbers = (arr) => {
 
 // some
 const anyGreaterThan10 = (arr) => {
-  if (arr <= 0) {
+  if (arr.length <= 0) {
     return false;
   }
   return arr.some(value => value > 10);
@@ -93,7 +93,6 @@ const sortUsersByOrder = (arr) => {
 
 const sortUsersByName = (arr) => {
   const copyArr = [...arr];
-
   copyArr.sort((person1, person2) => {
     if (person1.name.toLowerCase() < person2.name.toLowerCase()) {
       return -1;
